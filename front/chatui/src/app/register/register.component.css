@@ -1,0 +1,13 @@
+h2{
+    color: red;
+    text-align: center;
+}
+
+/* *{
+    background-color: orangered;
+} */
+
+#a1{
+    align-items: flex-end;
+    color: white;
+}

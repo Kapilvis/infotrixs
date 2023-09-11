@@ -1,0 +1,67 @@
+GET http://localhost:3300/ HTTP/1.1
+
+#### user search
+GET http://localhost:3300/user/all HTTP/1.1
+
+### user create
+
+POST http://localhost:3300/user/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "mail": "Nadeem@gmail.com",
+    "name":"Nadeem",
+    "password": "Nadeem",
+    "user": "NamdemK786"
+    
+
+}
+
+### login
+
+POST http://localhost:3300/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "mail": "Nadeem@gmail.com",
+    "password": "Nadeem"
+    
+
+}
+
+
+### user delete
+DELETE http://localhost:3300/user/delete HTTP/1.1
+Content-Type: application/json
+
+{
+   "email":"ababab@abc.com"
+}
+
+
+### user reset password 
+
+PUT http://localhost:3300/user/update/pass HTTP/1.1
+Content-Type: application/json
+
+{
+    "password":"Kapil619",
+    "email":"rdx619619@gmail.com"
+}
+
+
+
+### user  update mobile 
+
+# PUT http://localhost:3300/user/update/mobile HTTP/1.1
+# Content-Type: application/json
+
+# {
+#     "mobile":"6264216704",
+#     "email":"rdx619619@gmail.com"
+# }
+
+
+
+
+

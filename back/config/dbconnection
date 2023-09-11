@@ -1,0 +1,11 @@
+const mysql=require("mysql2"); // for data secure becuse in cotted in visible form index file
+const dotenv=require("dotenv"); // abhi pata nhi 
+dotenv.config();
+
+let conn = mysql.createConnection({
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
+    host: process.env.MYSQL_HOST
+});
+module.exports=conn; // its sytax for this file 

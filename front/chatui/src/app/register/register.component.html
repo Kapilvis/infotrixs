@@ -1,0 +1,42 @@
+<h2>CHAT_UI REGISTERATION </h2>
+<hr>
+<div>
+    <form class="user p-3 m-2" 
+    [formGroup]="myform2">
+        <div class="form-group row">
+            <div class="col-sm-6 ">
+                <input type="text" class="form-control form-control-user" id="exampleRepeatPassword"
+                    placeholder="User ID " formControlName="user">
+            </div>
+             
+             <br>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                            placeholder="EMail id  " formControlName="mail">
+                    </div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-6 mt-2">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                        placeholder="Name" formControlName="name">
+                </div>
+                    <div class="col-sm-6 mt-2">
+                        <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                            placeholder="Password" formControlName="password">
+                    </div>
+            </div>
+                
+            <div id="a1">
+<!--                 
+                <button type="button" [mat-dialog-close] class="btn btn-primary btn-user col-sm-3 m-2" (click)="Submit1()" >
+                    Update
+                </button> -->
+
+                <button type="button"  class="btn btn-primary btn-user col-sm-3 mt-2" (click)="Submit()" >
+                    Save
+                </button>
+            </div>
+            
+    
+

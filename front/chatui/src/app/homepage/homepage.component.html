@@ -1,0 +1,120 @@
+<div class="main row">
+
+    <h1 id="a2">Chat_UI</h1>
+    <div class="left col-4  " border="1">
+
+        <!-- <button type="submit" class="btn btn-primary"> Hyy</button> -->
+
+        <h1 id="a1"> Join Open Room </h1>
+        <!-- <input type="text" placeholder="User name OR email id "><br>
+    <input type="password" placeholder="password "><br> -->
+
+        <form class="m-7" [formGroup]="myform2">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" id="form2Example1"  formControlName="user" class="form-control ml-5" />
+                <label class="form-label" for="form2Example1" >User ID</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="form2Example2" formControlName="password" class="form-control" />
+                <label class="form-label" for="form2Example2" >Password</label>
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                        <label class="form-check-label" for="form2Example31"> Remember me </label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!-- Simple link -->
+                    <a href="#!">Forgot password?</a>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="button" class="btn btn-primary btn-block mb-4" (click)="Sign()">Sign in</button>
+
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Not a member? <a class="a" (click)="show()">Register</a></p>
+              
+            </div>
+        </form>
+
+    </div>
+
+    <div class="right col-8">
+        <div class="head">
+            <div class="row">
+                <div class="col-8">
+                    <h2> #Tweet </h2>
+
+                </div>
+                <div class="col-2">
+                    
+                    <h2> {{username}} </h2> 
+                </div>
+                <div class="col-2">
+
+                    <button type="submit" class="btn btn-success" (click)="Logout()"> Logout</button>
+                </div>
+                    
+
+                    
+            </div>
+        </div>
+        <div  routerLink="callouts">
+            
+            <div class="row">
+                <div class="col-12" #chatparent style=" height: 500px; overflow-y:auto ;  width: 97.5%;" [scrollTop]="chatparent.scrollHeight">
+
+
+                    <!-- <script>
+    window.scrollTo(0,9999);
+
+    // </script> -->
+
+
+                    <app-callout></app-callout>
+
+                </div>
+                <div class="col-12">
+                    <div class="inputbox">
+                        <input type="text" placeholder="write something"  width="100%" id="input" #input name="input">
+                        <button type="submit" class="btn btn-success " id="btn" (click)="Input(input.value)">Send</button>
+            
+                    </div>
+                </div>
+            </div>
+            <!-- <router-outlet></router-outlet> -->
+
+            <!-- <table class="table">
+                <tr>
+                    <th>User </th>
+                    <th > Message </th>
+                    <th> Time</th>
+                </tr>
+                <td>kP</td>
+                <td>Hyy</td>
+                <td>16:04</td>
+                <tr>
+                    <td></td>
+
+                </tr>
+            </table> -->
+
+            
+        </div>
+
+       
+
+    </div>
+
+</div>
